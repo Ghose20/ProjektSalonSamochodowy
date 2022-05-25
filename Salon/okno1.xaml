@@ -8,6 +8,15 @@
         Title="Window1" Height="450" Width="800">
     <Grid>
         <Label Content="Wykonał:&#xD;&#xA;Maciej Firek&#xD;&#xA;nr.Albumu:14045" HorizontalAlignment="Left" Margin="304,170,0,0" VerticalAlignment="Top" Height="94" Width="161"/>
+        <Button x:Name="Powrot"  Content="Powrót" HorizontalAlignment="Left" Height="36" Margin="316,269,0,0" VerticalAlignment="Top" Width="102" Click="Button_Click"/>
+        <Button x:Name="CloseButton"  Click="CloseButton_Click" Margin="745,10,10,369">
+            <Button.Foreground>
+                <ImageBrush Stretch="None"/>
+            </Button.Foreground>
+            <Button.Background>
+                <ImageBrush ImageSource="/icons8-close-window-48.png"/>
+            </Button.Background>
+        </Button>
 
     </Grid>
 </Window>
