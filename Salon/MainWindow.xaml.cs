@@ -56,5 +56,19 @@ namespace Salon
             txtboxContactNumber.Text = "";
 
         }
+        private void dgvklienci_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            System.Windows.Controls.DataGrid gd = (System.Windows.Controls.DataGrid)sender;
+            DataRowView row_selected = gd.SelectedItem as DataRowView;
+            if (row_selected != null)
+            {
+                txtboxID.Text = row_selected["ID"].ToString();
+                txtboxFirstName.Text = row_selected["Imie"].ToString();
+                txtboxLastName.Text = row_selected["Nazwisko"].ToString();
+                txtboxPesel.Text = row_selected["Pesel"].ToString();
+                txtboxemail.Text = row_selected["Email"].ToString();
+                txtboxContactNumber.Text = row_selected["Telefon"].ToString();
+            }
+        }
     }
 }
