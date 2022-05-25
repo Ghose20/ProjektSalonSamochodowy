@@ -95,5 +95,17 @@ namespace Salon
                 System.Windows.MessageBox.Show("Nie udało sie usunąć klienta");
             }
         }
+        static string myconnstr = ConfigurationManager.ConnectionStrings["connstrng"].ConnectionString;
+
+        private void txtboxSearch_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+            string keyword = txtboxSearch.Text;
+
+            SqlConnection conn = new SqlConnection(myconnstr);
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Klienci WHERE imie LIKE '%" + keyword + "%' OR Nazwisko LIKE '%" + keyword + "%' OR Pesel LIKE '%" + keyword + "%'", conn);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            dgvklienci.ItemsSource = dt.DefaultView;
+        }
     }
 }
