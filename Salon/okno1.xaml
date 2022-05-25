@@ -7,6 +7,7 @@
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Wykonał:&#xD;&#xA;Maciej Firek&#xD;&#xA;nr.Albumu:14045" HorizontalAlignment="Left" Margin="304,170,0,0" VerticalAlignment="Top" Height="94" Width="161"/>
+
     </Grid>
 </Window>
