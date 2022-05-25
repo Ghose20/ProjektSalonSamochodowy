@@ -139,7 +139,7 @@ namespace Salon
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            okno1 win2 = new okno1();
+            okno1 win = new okno1();
             win2.Show();
         }
 
