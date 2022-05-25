@@ -46,6 +46,15 @@ namespace Salon
             DataTable dt = c.Select();
             dgvklienci.ItemsSource = dt.DefaultView;
         }
+        public void Clear()
+        {
+            txtboxID.Text = "";
+            txtboxFirstName.Text = "";
+            txtboxLastName.Text = "";
+            txtboxPesel.Text = "";
+            txtboxemail.Text = "";
+            txtboxContactNumber.Text = "";
 
+        }
     }
 }
