@@ -70,5 +70,30 @@ namespace Salon
                 txtboxContactNumber.Text = row_selected["Telefon"].ToString();
             }
         }
+        private void btnClear_Click(object sender, EventArgs e)
+        {
+            Clear();
+
+        }
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+
+            c.ID = Convert.ToInt32(txtboxID.Text);
+            bool success = c.Delete(c);
+
+            if (success == true)
+            {
+                System.Windows.MessageBox.Show("Pomyślnie usunieto klienta");
+                DataTable dt = c.Select();
+                dgvklienci.ItemsSource = dt.DefaultView;
+                Clear();
+            }
+
+
+            else
+            {
+                System.Windows.MessageBox.Show("Nie udało sie usunąć klienta");
+            }
+        }
     }
 }
