@@ -111,6 +111,7 @@ namespace Salon
             string keyword = txtboxSearch.Text;
 
             SqlConnection conn = new SqlConnection(myconnstr);
+            // wyszukanie po imieniu lub nazwisku lub po numerze pesel
             SqlDataAdapter sda = new SqlDataAdapter("SELECT * FROM Klienci WHERE imie LIKE '%" + keyword + "%' OR Nazwisko LIKE '%" + keyword + "%' OR Pesel LIKE '%" + keyword + "%'", conn);
             DataTable dt = new DataTable();
             sda.Fill(dt);
@@ -161,6 +162,7 @@ namespace Salon
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
         {
+            // zamykanie aplikacji
             Close();
         }
     }
