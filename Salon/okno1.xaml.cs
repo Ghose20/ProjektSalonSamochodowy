@@ -17,9 +17,9 @@ namespace Salon
     /// <summary>
     /// Interaction logic for Window1.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class okno1 : Window
     {
-        public Window1()
+        public okno1()
         {
             InitializeComponent();
         }
