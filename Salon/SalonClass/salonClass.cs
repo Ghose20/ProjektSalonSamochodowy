@@ -82,5 +82,43 @@ namespace Salon.SalonClass
             }
             return isSuccess;
         }
+        public bool Update(salonClass c)
+        {
+            bool isSuccess = false;
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            try
+            {
+                string sql = "UPDATE klienci SET Imie=@imie, Nazwisko=@nazwisko, Pesel=@pesel, Email=@email, Telefon=@telefon WHERE ID=@ID";
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@Imie", c.imie);
+                cmd.Parameters.AddWithValue("@Nazwisko", c.nazwisko);
+                cmd.Parameters.AddWithValue("@Pesel", c.Pesel);
+                cmd.Parameters.AddWithValue("@Email", c.email);
+                cmd.Parameters.AddWithValue("@Telefon", c.telefon);
+                cmd.Parameters.AddWithValue("@ID", c.ID);
+
+                conn.Open();
+
+                int rows = cmd.ExecuteNonQuery();
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+                else
+                {
+                    isSuccess = false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                conn.Close();
+            }
+            return isSuccess;
+        }
     }
 }
