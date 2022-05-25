@@ -79,6 +79,7 @@ namespace Salon
         {
 
             c.ID = Convert.ToInt32(txtboxID.Text);
+            
             bool success = c.Delete(c);
 
             if (success == true)

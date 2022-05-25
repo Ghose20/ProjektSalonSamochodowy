@@ -30,7 +30,7 @@
         <TextBox x:Name="txtboxSearch" HorizontalAlignment="Left" Margin="449,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="29" TextChanged="txtboxSearch_TextChanged_1"/>
         <TextBox x:Name="txtboxemail" HorizontalAlignment="Left" Margin="185,306,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" Height="30"/>
         <Label x:Name="lblemail" Content="E-mail" HorizontalAlignment="Left" Height="29" Margin="72,292,0,0" VerticalAlignment="Top" Width="74"/>
-        <Button Content ="Wykonawca" Margin="778,407,44,47" Click="Button_Click" />
+        <Button Content ="Wykonawca" Margin="770,407,44,47" Click="Button_Click" />
         <Button Name="CloseButton"  Click="CloseButton_Click" Margin="845,10,10,425">
             <Button.Foreground>
                 <ImageBrush Stretch="None"/>
