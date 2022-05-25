@@ -131,5 +131,21 @@ namespace Salon
             }
 
         }
+        private void Grid_Loaded(object sender, RoutedEventArgs e)
+        {
+            DataTable dt = c.Select();
+            dgvklienci.ItemsSource = dt.DefaultView;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            okno1 win2 = new okno1();
+            win2.Show();
+        }
+
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }
