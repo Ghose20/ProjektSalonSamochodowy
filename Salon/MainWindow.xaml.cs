@@ -107,5 +107,29 @@ namespace Salon
             sda.Fill(dt);
             dgvklienci.ItemsSource = dt.DefaultView;
         }
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            c.ID = int.Parse(txtboxID.Text);
+            c.imie = txtboxFirstName.Text;
+            c.nazwisko = txtboxLastName.Text;
+            c.Pesel = txtboxPesel.Text;
+            c.email = txtboxemail.Text;
+            c.telefon = txtboxContactNumber.Text;
+
+
+            bool success = c.Update(c);
+            if (success == true)
+            {
+                System.Windows.MessageBox.Show("Dane klienta zostaly zaakutalizowane pomyślnie");
+                DataTable dt = c.Select();
+                dgvklienci.ItemsSource = dt.DefaultView;
+                Clear();
+            }
+            else
+            {
+                System.Windows.MessageBox.Show("Nie udało sie zaaktualizować danych klienta");
+            }
+
+        }
     }
 }
