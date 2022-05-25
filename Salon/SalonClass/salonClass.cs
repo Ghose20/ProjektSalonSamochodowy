@@ -120,5 +120,41 @@ namespace Salon.SalonClass
             }
             return isSuccess;
         }
+        public bool Delete(salonClass c)
+        {
+            bool isSuccess = false;
+            SqlConnection conn = new SqlConnection(myconnstrng);
+            try
+            {
+
+                string sql = "DELETE FROM klienci WHERE ID=@ID";
+
+
+                SqlCommand cmd = new SqlCommand(sql, conn);
+                cmd.Parameters.AddWithValue("@ID", c.ID);
+
+                conn.Open();
+                int rows = cmd.ExecuteNonQuery();
+
+                if (rows > 0)
+                {
+                    isSuccess = true;
+                }
+                else
+                {
+                    isSuccess = false;
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+
+                conn.Close();
+            }
+            return isSuccess;
+        }
     }
 }
