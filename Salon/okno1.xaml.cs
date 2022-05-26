@@ -28,6 +28,7 @@ namespace Salon
         {
             MainWindow win1 = new MainWindow();
             win1.Show();
+            Close();
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)

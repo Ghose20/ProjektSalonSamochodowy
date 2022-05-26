@@ -158,6 +158,7 @@ namespace Salon
             // przejscie do kolejnego okna aplikacji
             okno1 win2 = new okno1();
             win2.Show();
+            Close();
         }
 
         private void CloseButton_Click(object sender, RoutedEventArgs e)
