@@ -1,5 +1,5 @@
 /* tworzenie bazy danych */ 
-CREATE DATABASE SalonSamochodowy69
+CREATE DATABASE SalonSamochodowy
 COLLATE Polish_100_CI_AS; 
 
 /* tworzenie tabel */ 
@@ -69,7 +69,7 @@ COLLATE Polish_100_CI_AS;
 /* DODAWANIE WARTOSCI DO TABEL */																																	
 	INSERT INTO Statusy (Nazwa)
 	VALUES  ('Wolny'),
-			('Zajêty'),
+			('ZajÃªty'),
 			('Niepotwierdzona'),
 			('Potwierdzona'),
 			('Anulowana'),
@@ -97,9 +97,9 @@ COLLATE Polish_100_CI_AS;
 
 	INSERT INTO Dostawcy (nazwa,MarkaID,NIP,KodPocztowy,Miasto,Adres) VALUES ('Audi Select Plus',1,'5466549871','33-410','Krakow','ul. Zakopianska 169a'),
 	('BMW M-Cars',2,'2662548871','33-410','Krakow','Gora libertowska'),
-	('Toyota Dobrygowski Kraków Modlnica',3,'3253658541','33-410','Krakow','ul. Czestochowska 30')
+	('Toyota Dobrygowski KrakÃ³w Modlnica',3,'3253658541','33-410','Krakow','ul. Czestochowska 30')
 	
-	INSERT INTO Pracownicy(imie,nazwisko,email,telefon,adres) VALUES ('Jan','Kowalski','Kowalski@gmail.com','321654987','ul. D³uga 12'),
+	INSERT INTO Pracownicy(imie,nazwisko,email,telefon,adres) VALUES ('Jan','Kowalski','Kowalski@gmail.com','321654987','ul. DÂ³uga 12'),
 	('Kamil','Kromka','Kromka@gmail.com','654987485','ul. Krakowska 38'),
 	('Krystian','Baton','Baton@gmail.com','842964587','ul. Zakopianska 64')
 
